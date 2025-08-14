@@ -8,6 +8,7 @@ import Layout from "./components/Layout";
 import Users from "./pages/Users";
 import Posts from "./pages/Posts";
 import Albums from "./pages/Albums";
+import PostDetail from "./pages/PostDetail";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
             <Route path="/users" element={<Users />} />
             <Route path="/users/:id/posts" element={<Posts />} />
             <Route path="/users/:id/albums" element={<Albums />} />
+            <Route path="/posts/:id" element={<PostDetail />} />
           </Route>
         </Routes>
       </Router>
