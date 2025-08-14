@@ -10,6 +10,7 @@ import Posts from "./pages/Posts";
 import Albums from "./pages/Albums";
 import PostDetail from "./pages/PostDetail";
 import Photos from "./pages/PostDetail";
+import PhotoDetail from "./pages/PhotoDetail";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
             <Route path="/users/:id/albums" element={<Albums />} />
             <Route path="/posts/:id" element={<PostDetail />} />
             <Route path="/albums/:id/photos" element={<Photos />} />
+            <Route path="/photos/:id" element={<PhotoDetail />} />
           </Route>
         </Routes>
       </Router>
