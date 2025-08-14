@@ -5,7 +5,7 @@
    cd social-dashboard
 
 2. **Install dependencies**
-   npm install
+   npm install (using node : 20.13.0)
 
 3. **Start the development server**
    npm start
