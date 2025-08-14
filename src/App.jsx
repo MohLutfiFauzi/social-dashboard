@@ -7,6 +7,7 @@ import {
 import Layout from "./components/Layout";
 import Users from "./pages/Users";
 import Posts from "./pages/Posts";
+import Albums from "./pages/Albums";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Navigate to="/users" replace />} />
             <Route path="/users" element={<Users />} />
             <Route path="/users/:id/posts" element={<Posts />} />
+            <Route path="/users/:id/albums" element={<Albums />} />
           </Route>
         </Routes>
       </Router>
