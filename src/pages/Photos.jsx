@@ -25,7 +25,11 @@ export default function Photos() {
         {photos.map((photo) => (
           <Col md={3} key={photo.id} className="mb-3">
             <Card>
-              <Card.Img variant="top" src={photo.thumbnailUrl} />
+              <Card.Img
+                variant="top"
+                alt={photo.title}
+                src={photo.thumbnailUrl}
+              />
               <Card.Body>
                 <Card.Title className="fs-6">{photo.title}</Card.Title>
                 <Button
