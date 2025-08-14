@@ -20,3 +20,13 @@ export const getAlbumPhotos = (albumId) => api.get(`/albums/${albumId}/photos`);
 
 // Photos
 export const getPhotoDetail = (photoId) => api.get(`/photos/${photoId}`);
+
+// Posts CRUD
+export const createPost = (data) => api.post("/posts", data);
+export const updatePost = (id, data) => api.put(`/posts/${id}`, data);
+export const deletePost = (id) => api.delete(`/posts/${id}`);
+
+// Comments CRUD
+export const createComment = (data) => api.post("/comments", data);
+export const updateComment = (id, data) => api.put(`/comments/${id}`, data);
+export const deleteComment = (id) => api.delete(`/comments/${id}`);

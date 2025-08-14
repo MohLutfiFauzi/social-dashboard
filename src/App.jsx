@@ -9,7 +9,7 @@ import Users from "./pages/Users";
 import Posts from "./pages/Posts";
 import Albums from "./pages/Albums";
 import PostDetail from "./pages/PostDetail";
-import Photos from "./pages/PostDetail";
+import Photos from "./pages/Photos";
 import PhotoDetail from "./pages/PhotoDetail";
 function App() {
   return (
