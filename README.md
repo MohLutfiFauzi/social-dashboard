@@ -8,7 +8,7 @@
    npm install (using node : 20.13.0)
 
 3. **Start the development server**
-   npm start
+   npm run dev
 
 4. **Open in browser**
    <http://localhost:5174/users>
