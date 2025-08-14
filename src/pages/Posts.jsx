@@ -133,7 +133,11 @@ export default function Posts() {
           <Button variant="secondary" onClick={() => setShowModal(false)}>
             Batal
           </Button>
-          <Button variant="primary" onClick={handleSave}>
+          <Button
+            variant="primary"
+            disabled={!formData.title || !formData.body}
+            onClick={handleSave}
+          >
             Simpan
           </Button>
         </Modal.Footer>

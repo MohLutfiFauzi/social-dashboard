@@ -16,7 +16,6 @@ export default function PostDetail() {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // State untuk modal
   const [showModal, setShowModal] = useState(false);
   const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({
@@ -51,6 +50,12 @@ export default function PostDetail() {
   };
 
   const handleSave = async () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      alert("Email tidak valid!");
+      return;
+    }
+
     if (editingId) {
       await updateComment(editingId, { ...formData, postId: id });
       setComments(
@@ -135,6 +140,7 @@ export default function PostDetail() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
+                required
               />
             </Form.Group>
             <Form.Group>
@@ -154,7 +160,11 @@ export default function PostDetail() {
           <Button variant="secondary" onClick={() => setShowModal(false)}>
             Batal
           </Button>
-          <Button variant="primary" onClick={handleSave}>
+          <Button
+            variant="primary"
+            disabled={!formData.name || !formData.email || !formData.body}
+            onClick={handleSave}
+          >
             Simpan
           </Button>
         </Modal.Footer>
